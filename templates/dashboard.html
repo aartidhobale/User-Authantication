@@ -1,0 +1,19 @@
+{% extends 'app.html'%}
+{% block content%}
+    
+    <div class="container">
+        <h2>Welcome to the Dashboard</h2>
+
+        {% if user %}
+        <p>User Information:</p>
+        <ul>
+            <li>Name: {{ user[1] }}</li> <!-- Assuming user[1] is the name -->
+            <li>Email: {{ user[2] }}</li> <!-- Assuming user[2] is the email -->
+        </ul>
+        <a href="/logout" class="btn btn-dark">Logout</a>
+        {% else %}
+        <p>No user information available.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}
